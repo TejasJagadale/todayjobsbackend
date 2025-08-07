@@ -11,7 +11,7 @@ const app = express();
 // Enable CORS
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://todayjobs.vercel.app"], 
+    origin: ["http://localhost:3000", "https://todayjobs.vercel.app", "https://jobpostingform.vercel.app"], 
     credentials: true
   })
 );
@@ -35,4 +35,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
 
