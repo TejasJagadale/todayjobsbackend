@@ -30,10 +30,16 @@ mongoose
 app.use("/api/jobs", jobRoutes);
 app.use("/api/links", govLinkRoutes);
 
+//Basic Route
+app.get("/", (req, res) => {
+  res.send("Content Management API");
+});
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
 
 
